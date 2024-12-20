@@ -1,0 +1,253 @@
+/* Styles généraux */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #fff3e6; /* Beige sable */
+  color: #4a3f35; /* Brun foncé */
+  margin: 0;
+  padding: 0;
+}
+/* Conteneur principal de la bannière */
+.banniere-container {
+  position: relative;
+  width: 100%;
+  height: 900px; /* Ajuste la hauteur selon tes besoins */
+  overflow: hidden; /* Masque le contenu qui dépasse */
+}
+
+/* Image de la bannière */
+.banniere {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajuste l'image pour qu'elle couvre tout */
+}
+
+/* Barre de navigation sur la bannière */
+.banniere-container nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10; /* Assure que le nav reste au-dessus de tout */
+}
+
+.banniere-container nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.banniere-container nav a:hover {
+  color: #ffd700; /* Or */
+}
+
+/* Titre sur la bannière */
+.banniere-container h1 {
+  position: absolute;
+  bottom: 600px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 3em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre pour plus de lisibilité */
+  z-index: 10;
+}
+
+/* Formulaires */
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #d9644a; /* Rouge terre cuite */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+form button {
+  background-color: #d9644a; /* Rouge terre cuite */
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #ffd700; /* Or */
+  color: #4a3f35; /* Brun foncé */
+}
+
+/* Pied de page */
+footer {
+  background-color: #4a3f35; /* Brun foncé */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 30px;
+}
+
+/* Liens */
+a {
+  color: #d9644a; /* Rouge terre cuite */
+}
+
+a:hover {
+  color: #ffd700; /* Or */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.card-pos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+.card {
+  width: 300px;
+  height: 300px;
+  background: #d9644a;
+}
+/* Dashboard */
+.dashboard {
+  font-family: Arial, sans-serif;
+  background-color: #fff3e6; /* Beige sable */
+  color: #4a3f35; /* Brun foncé */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Barre de navigation */
+.dashboard-nav {
+  background-color: #d9644a; /* Rouge terre cuite */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-nav .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.dashboard-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.dashboard-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dashboard-nav ul li a:hover {
+  color: #ffd700; /* Or */
+}
+
+/* En-tête */
+.dashboard-header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #ffd700; /* Or */
+  color: #4a3f35;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.dashboard-header p {
+  margin: 10px 0 0;
+  font-size: 1.2em;
+}
+
+/* Contenu principal */
+.dashboard-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #d9644a; /* Rouge terre cuite */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+}
+
+.card h2 {
+  color: #d9644a; /* Rouge terre cuite */
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #4a3f35;
+  margin-bottom: 15px;
+}
+
+.card .btn {
+  display: inline-block;
+  background-color: #d9644a;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.card .btn:hover {
+  background-color: #ffd700;
+  color: #4a3f35;
+}
+
+/* Pied de page */
+.dashboard-footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #4a3f35; /* Brun foncé */
+  color: white;
+  margin-top: auto;
+}

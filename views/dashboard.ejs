@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Barre de navigation -->
+      <nav class="dashboard-nav">
+        <div class="logo">Mon Blog</div>
+        <ul>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/profile">Profil</a></li>
+          <li><a href="/articles">Articles</a></li>
+          <li><a href="/auth/logout">Déconnexion</a></li>
+        </ul>
+      </nav>
+
+      <!-- En-tête -->
+      <header class="dashboard-header">
+        <h1>Bienvenue, <%= user.username %>!</h1>
+        <p>Prêt(e) à explorer vos options ?</p>
+      </header>
+
+      <!-- Contenu principal -->
+      <div class="dashboard-content">
+        <div class="card">
+          <h2>Créer un article</h2>
+          <p>Partagez vos idées avec le monde !</p>
+          <a href="/articles/new" class="btn">Nouvel article</a>
+        </div>
+        <div class="card">
+          <h2>Voir vos articles</h2>
+          <p>Consultez tous les articles que vous avez écrits.</p>
+          <a href="/articles" class="btn">Mes articles</a>
+        </div>
+        <div class="card">
+          <h2>Modifier votre profil</h2>
+          <p>Personnalisez vos informations personnelles.</p>
+          <a href="/profile/edit" class="btn">Modifier</a>
+        </div>
+      </div>
+
+      <!-- Pied de page -->
+      <footer class="dashboard-footer">
+        <p>&copy; 2024 Mon Blog. Tous droits réservés.</p>
+      </footer>
+    </div>
+  </body>
+</html>

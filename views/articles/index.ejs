@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Articles</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <h1>Liste des articles</h1>
+    <a href="/articles/new">Créer un nouvel article</a>
+    <ul>
+      <% articles.forEach(article => { %>
+      <li>
+        <a href="/articles/<%= article._id %>"><%= article.title %></a>
+        <p>Par : <%= article.author.username %>, le <%= article.createdAt.toDateString() %></p>
+      </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>

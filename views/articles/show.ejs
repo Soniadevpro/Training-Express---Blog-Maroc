@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title><%= article.title %></title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <h1><%= article.title %></h1>
+    <p><%= article.content %></p>
+    <p>Par : <%= article.author.username %>, le <%= article.createdAt.toDateString() %></p>
+
+    <h2>Commentaires</h2>
+    <ul>
+      <% article.comments.forEach(comment => { %>
+      <li>
+        <p><%= comment.content %></p>
+        <p>Par : <%= comment.author.username %>, le <%= comment.createdAt.toDateString() %></p>
+      </li>
+      <% }); %>
+    </ul>
+
+    <h3>Ajouter un commentaire</h3>
+    <form action="/articles/<%= article._id %>/comments" method="POST">
+      <textarea name="content" rows="3" required></textarea>
+      <button type="submit">Commenter</button>
+    </form>
+  </body>
+</html>
